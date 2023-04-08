@@ -12,15 +12,15 @@ class LoginForm(forms.Form):
 
 class RegisterForm(UserCreationForm):
     username = forms.CharField(max_length=200, label='Nom d\'utilisateur', widget=forms.TextInput(
-        attrs={'class': 'form-control form-control-lg', 'placeholder': 'Rida123'}), )
+        attrs={'class': 'form-control form-control-lg', 'placeholder': 'password'}), )
     email = forms.EmailField(label='Adresse mail', widget=forms.EmailInput(
-        attrs={'class': 'form-control form-control-lg', 'placeholder': 'rida.messaoudene@reseau-cd.fr'}))
+        attrs={'class': 'form-control form-control-lg', 'placeholder': 'email'}))
     first_name = forms.CharField(label='Prénom', max_length=50,
                                  widget=forms.TextInput(
-                                     attrs={'class': 'form-control form-control-lg', 'placeholder': 'Rida'}))
+                                     attrs={'class': 'form-control form-control-lg', 'placeholder': 'Prenom'}))
     last_name = forms.CharField(label='Nom de famille', max_length=50,
                                 widget=forms.TextInput(
-                                    attrs={'class': 'form-control form-control-lg', 'placeholder': 'Messaoudene'}))
+                                    attrs={'class': 'form-control form-control-lg', 'placeholder': 'Nom'}))
 
     class Meta:
         model = User
